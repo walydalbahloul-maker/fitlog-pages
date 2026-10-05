@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>FitLog</title>
+<style>
+  :root { --bg:#f6f9fa; --card:#ffffff; --text:#16262b; --muted:#55707a; --accent:#059669; --border:#dbe6e8; color-scheme: light dark; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1a1d; --card:#16262b; --text:#e9f3f3; --muted:#93aeb4; --accent:#34d399; --border:#26393e; } }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:16px; background:var(--bg); color:var(--text); font-family:-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.5; }
+  main { width:100%; max-width:420px; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:32px 24px; text-align:center; }
+  .icon { font-size:48px; color:var(--accent); line-height:1; margin-bottom:12px; }
+  h1 { font-size:22px; margin:0 0 8px; }
+  p { margin:0 0 24px; color:var(--muted); }
+  a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 24px; border-radius:999px; font-weight:600; }
+</style>
+</head>
+<body>
+<main>
+  <div class="icon" id="icon">&#10003;</div>
+  <h1 id="title"></h1>
+  <p id="body"></p>
+  <a class="btn" id="open" href="fitlog://"></a>
+</main>
+<script>
+(function () {
+  var T = {
+    en: { ok: "Email confirmed", okBody: "Your email is verified. Go back to the FitLog app and sign in.", bad: "Link not valid", badBody: "This link is invalid or has expired. Open the FitLog app and try again.", open: "Open FitLog" },
+    it: { ok: "Email confermata", okBody: "La tua email è stata verificata. Torna nell'app FitLog e accedi.", bad: "Link non valido", badBody: "Questo link non è valido o è scaduto. Apri l'app FitLog e riprova.", open: "Apri FitLog" },
+    ar: { ok: "تم تأكيد البريد الإلكتروني", okBody: "تم التحقق من بريدك الإلكتروني. ارجع إلى تطبيق FitLog وسجّل الدخول.", bad: "الرابط غير صالح", badBody: "هذا الرابط غير صالح أو انتهت صلاحيته. افتح تطبيق FitLog وحاول مرة أخرى.", open: "فتح FitLog" },
+    fr: { ok: "E-mail confirmé", okBody: "Votre e-mail est vérifié. Retournez dans l'application FitLog et connectez-vous.", bad: "Lien non valide", badBody: "Ce lien est invalide ou a expiré. Ouvrez l'application FitLog et réessayez.", open: "Ouvrir FitLog" },
+    de: { ok: "E-Mail bestätigt", okBody: "Ihre E-Mail-Adresse ist bestätigt. Kehren Sie zur FitLog-App zurück und melden Sie sich an.", bad: "Link ungültig", badBody: "Dieser Link ist ungültig oder abgelaufen. Öffnen Sie die FitLog-App und versuchen Sie es erneut.", open: "FitLog öffnen" },
+    es: { ok: "Correo confirmado", okBody: "Tu correo está verificado. Vuelve a la app FitLog e inicia sesión.", bad: "Enlace no válido", badBody: "Este enlace no es válido o ha caducado. Abre la app FitLog e inténtalo de nuevo.", open: "Abrir FitLog" },
+    pt: { ok: "E-mail confirmado", okBody: "O seu e-mail foi verificado. Volte à app FitLog e inicie sessão.", bad: "Ligação inválida", badBody: "Esta ligação é inválida ou expirou. Abra a app FitLog e tente novamente.", open: "Abrir o FitLog" },
+    tr: { ok: "E-posta onaylandı", okBody: "E-postanız doğrulandı. FitLog uygulamasına dönüp giriş yapın.", bad: "Bağlantı geçersiz", badBody: "Bu bağlantı geçersiz veya süresi dolmuş. FitLog uygulamasını açıp tekrar deneyin.", open: "FitLog'u aç" }
+  };
+  var lang = (navigator.language || "en").slice(0, 2).toLowerCase();
+  var t = T[lang] || T.en;
+  var failed = /(^|[#&?])error(_code|_description)?=/.test(window.location.hash + window.location.search);
+
+  document.documentElement.lang = T[lang] ? lang : "en";
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.getElementById("icon").innerHTML = failed ? "&#33;" : "&#10003;";
+  document.getElementById("title").textContent = failed ? t.bad : t.ok;
+  document.getElementById("body").textContent = failed ? t.badBody : t.okBody;
+  document.getElementById("open").textContent = t.open;
+
+  // The auth redirect can carry session tokens in the URL fragment: drop them right away.
+  if (window.location.hash || window.location.search) {
+    history.replaceState(null, "", window.location.pathname);
+  }
+})();
+</script>
+</body>
+</html>
