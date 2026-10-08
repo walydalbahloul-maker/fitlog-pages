@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitLog Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f6f9fa;
+    --surface: #ffffff;
+    --text: #16262b;
+    --text-muted: #55707a;
+    --accent: #047857;
+    --accent-soft: #d1fae5;
+    --border: #dbe6e8;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1a1d;
+      --surface: #16262b;
+      --text: #e9f3f3;
+      --text-muted: #93aeb4;
+      --accent: #34d399;
+      --accent-soft: #123a2c;
+      --border: #26393e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 48px 20px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .kicker { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  h1 { font-size: clamp(30px, 6vw, 42px); font-weight: 700; margin: 10px 0 6px; }
+  .meta { color: var(--text-muted); font-size: 14px; margin-bottom: 28px; }
+  .intro { font-size: 17px; color: var(--text-muted); max-width: 62ch; margin-bottom: 32px; }
+  nav.toc { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; margin-bottom: 36px; }
+  nav.toc .toc-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  nav.toc ol { columns: 2; column-gap: 24px; margin: 0; padding-left: 20px; font-size: 14px; }
+  nav.toc li { break-inside: avoid; margin-bottom: 6px; }
+  nav.toc a { color: var(--text); text-decoration: none; }
+  section { padding-block: 26px; border-top: 1px solid var(--border); }
+  h2 { font-size: 21px; font-weight: 700; display: flex; align-items: baseline; gap: 10px; margin: 0 0 12px; }
+  h2 .num { font-size: 14px; color: var(--accent); font-weight: 600; }
+  p { margin: 0 0 14px; max-width: 68ch; }
+  ul { max-width: 66ch; padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+  .pill { display: inline-block; font-size: 12px; background: var(--accent-soft); color: var(--accent); padding: 3px 9px; border-radius: 999px; margin-bottom: 4px; font-weight: 600; }
+  .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; }
+  .contact-card .email { font-size: 16px; user-select: all; }
+  footer { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
+  @media (max-width: 520px) { nav.toc ol { columns: 1; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Legal &middot; Data protection</div>
+  <h1>FitLog Privacy Policy</h1>
+  <div class="meta">Effective October 8, 2026 &middot; Applies to the FitLog mobile app (iOS &amp; Android)</div>
+  <p class="intro">
+    FitLog is a macro and calorie tracker that uses AI to estimate nutrition from photos and text.
+    This page explains exactly what we collect to make that work, who we share it with, and how you can
+    export or delete it at any time.
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">On this page</div>
+    <ol>
+      <li><a href="#data-we-collect">Data we collect</a></li>
+      <li><a href="#ai-processing">How AI processing works</a></li>
+      <li><a href="#third-parties">Third-party services</a></li>
+      <li><a href="#retention">How long we keep it</a></li>
+      <li><a href="#your-rights">Your rights</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="data-we-collect">
+    <h2><span class="num">01</span> Data we collect</h2>
+    <p>We only collect what's needed to log your food, calculate your targets, and let you correct AI estimates when they're wrong.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Category</th><th>What it includes</th><th>Why we need it</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account</td>
+            <td>Email address, password (hashed, never stored in plain text)</td>
+            <td>Sign-in and account recovery</td>
+          </tr>
+          <tr>
+            <td>Profile &amp; targets</td>
+            <td>Age, sex, height, weight, activity level, weekly TDEE recomputation history</td>
+            <td>Calculating your daily calorie and macro targets</td>
+          </tr>
+          <tr>
+            <td>Food logs</td>
+            <td>Text descriptions, photos you submit, resulting macro estimates, your corrections</td>
+            <td>Building your daily log and improving future estimates for your account</td>
+          </tr>
+          <tr>
+            <td>Device &amp; diagnostics</td>
+            <td>App version, OS version, crash reports, error stack traces</td>
+            <td>Fixing bugs and crashes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We never collect payment details, contacts, location, or data from other apps on your device.</p>
+    <p>You can log meals without an account: those entries stay on your device and are never sent to us. They are uploaded only if you later create an account or sign in, so that they appear in your account.</p>
+  </section>
+
+  <section id="ai-processing">
+    <h2><span class="num">02</span> How AI processing works</h2>
+    <p>When you log food by photo or text (this requires an account), the image or text is sent &mdash; over an encrypted connection, from our server, never directly from your device &mdash; to Anthropic's Claude API, purely to generate a macro estimate. The estimate and the photo you attached are then saved to your log so you can review and correct it.</p>
+    <p>If you correct an AI estimate, we remember that correction for your account so similar entries are estimated more accurately next time. This correction history is private to you and never shared across accounts.</p>
+  </section>
+
+  <section id="third-parties">
+    <h2><span class="num">03</span> Third-party services</h2>
+    <p>We rely on a small number of infrastructure providers to run FitLog. None of them are permitted to use your data for their own purposes beyond providing the service to us.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Provider</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Supabase</td><td>Database, authentication, and file storage &mdash; every table is access-controlled so only you can read your own rows.</td></tr>
+          <tr><td>Anthropic (Claude API)</td><td>Photo- and text-based food recognition, called from our server, never from the app directly.</td></tr>
+          <tr><td>Open Food Facts</td><td>Public product database queried by barcode when you scan a packaged food. The request contains only the barcode number.</td></tr>
+          <tr><td>Sentry</td><td>Crash and error reporting &mdash; receives technical diagnostics only, never your food logs or health data.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">04</span> How long we keep it</h2>
+    <p>Your data is kept for as long as your account is active. If you delete your account, your profile, targets, and food logs are permanently deleted from our database. Backups that include your data are purged on our standard rotation, typically within 30 days. Meals logged without an account exist only on your device and are removed when you uninstall the app.</p>
+  </section>
+
+  <section id="your-rights">
+    <h2><span class="num">05</span> Your rights</h2>
+    <p>Wherever you are, you have the following rights over your own data, and FitLog gives you a direct way to exercise each one from inside the app:</p>
+    <ul>
+      <li><span class="pill">Export</span> Download your full food log and target history as a CSV or JSON file, from your profile.</li>
+      <li><span class="pill">Correct</span> Edit any AI-estimated entry at any time; your correction is saved immediately.</li>
+      <li><span class="pill">Delete</span> Permanently delete your account and all associated data from your profile settings (Profile &rarr; Danger zone &rarr; Delete account).</li>
+      <li><span class="pill">Access</span> Email us at the address below for a full copy of any data we hold that isn't already exportable in-app.</li>
+    </ul>
+  </section>
+
+  <section id="security">
+    <h2><span class="num">06</span> Security</h2>
+    <p>All traffic between the app and our servers is encrypted in transit (TLS). Data at rest is encrypted by our database provider. Every table enforces row-level security, meaning the database itself refuses to return another user's rows even in the event of an application bug.</p>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">07</span> Children's privacy</h2>
+    <p>FitLog is not directed at children under 16, and we don't knowingly collect data from them. If you believe a child has created an account, contact us and we'll delete it.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">08</span> Changes to this policy</h2>
+    <p>If we make a material change to how we collect or use your data, we'll update the effective date at the top of this page and notify you in-app before the change takes effect.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">09</span> Contact</h2>
+    <p>Questions about this policy, or a request that isn't covered by the in-app export/delete tools, go to:</p>
+    <div class="contact-card">
+      <a class="email" href="mailto:walydalbahloul@gmail.com">walydalbahloul@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    FitLog &mdash; Arabic-first AI macro and calorie tracking.
+  </footer>
+</div>
+</body>
+</html>
