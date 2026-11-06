@@ -66,7 +66,7 @@
 <div class="wrap">
   <div class="kicker">Legal &middot; Data protection</div>
   <h1>FitLog Privacy Policy</h1>
-  <div class="meta">Effective October 8, 2026 &middot; Applies to the FitLog mobile app (iOS &amp; Android)</div>
+  <div class="meta">Effective November 6, 2026 &middot; Applies to the FitLog mobile app (iOS &amp; Android)</div>
   <p class="intro">
     FitLog is a macro and calorie tracker that uses AI to estimate nutrition from photos and text.
     This page explains exactly what we collect to make that work, who we share it with, and how you can
@@ -113,6 +113,16 @@
             <td>Building your daily log and improving future estimates for your account</td>
           </tr>
           <tr>
+            <td>Subscription (FitLog Premium)</td>
+            <td>Whether you have an active subscription, the plan, and its start and end dates. We receive this from RevenueCat; Apple or Google process the payment.</td>
+            <td>Unlocking Premium and setting your daily AI limit</td>
+          </tr>
+          <tr>
+            <td>Anonymous session &amp; AI usage</td>
+            <td>If you use AI estimates or scans without an account, the app creates an anonymous technical identifier (no email, name or personal data) and we count your AI requests per day.</td>
+            <td>Applying the daily AI limit and preventing abuse</td>
+          </tr>
+          <tr>
             <td>Device &amp; diagnostics</td>
             <td>App version, OS version, crash reports, error stack traces</td>
             <td>Fixing bugs and crashes</td>
@@ -120,13 +130,13 @@
         </tbody>
       </table>
     </div>
-    <p>We never collect payment details, contacts, location, or data from other apps on your device.</p>
+    <p>We never see or store your card or payment details (payments are handled by Apple or Google), and we never collect contacts, location, or data from other apps on your device.</p>
     <p>You can log meals without an account: those entries stay on your device and are never sent to us. They are uploaded only if you later create an account or sign in, so that they appear in your account.</p>
   </section>
 
   <section id="ai-processing">
     <h2><span class="num">02</span> How AI processing works</h2>
-    <p>When you log food by photo or text (this requires an account), the image or text is sent &mdash; over an encrypted connection, from our server, never directly from your device &mdash; to Anthropic's Claude API, purely to generate a macro estimate. The estimate and the photo you attached are then saved to your log so you can review and correct it.</p>
+    <p>When you log food by photo or text (with an account, or without one at a lower daily limit), the image or text is sent &mdash; over an encrypted connection, from our server, never directly from your device &mdash; to Anthropic's Claude API, purely to generate a macro estimate. The estimate and the photo you attached are then saved to your log so you can review and correct it.</p>
     <p>If you correct an AI estimate, we remember that correction for your account so similar entries are estimated more accurately next time. This correction history is private to you and never shared across accounts.</p>
   </section>
 
@@ -141,6 +151,7 @@
         <tbody>
           <tr><td>Supabase</td><td>Database, authentication, and file storage &mdash; every table is access-controlled so only you can read your own rows.</td></tr>
           <tr><td>Anthropic (Claude API)</td><td>Photo- and text-based food recognition, called from our server, never from the app directly.</td></tr>
+          <tr><td>RevenueCat</td><td>Manages FitLog Premium subscriptions. It receives your FitLog account ID, the purchase and the subscription status, and tells our server whether Premium is active. The payment itself is processed by Apple (App Store) or Google (Google Play).</td></tr>
           <tr><td>Open Food Facts</td><td>Public product database queried by barcode when you scan a packaged food. The request contains only the barcode number.</td></tr>
           <tr><td>Sentry</td><td>Crash and error reporting &mdash; receives technical diagnostics only, never your food logs or health data.</td></tr>
         </tbody>
@@ -150,7 +161,7 @@
 
   <section id="retention">
     <h2><span class="num">04</span> How long we keep it</h2>
-    <p>Your data is kept for as long as your account is active. If you delete your account, your profile, targets, and food logs are permanently deleted from our database. Backups that include your data are purged on our standard rotation, typically within 30 days. Meals logged without an account exist only on your device and are removed when you uninstall the app.</p>
+    <p>Your data is kept for as long as your account is active. If you delete your account, your profile, targets, and food logs are permanently deleted from our database. Backups that include your data are purged on our standard rotation, typically within 30 days. Meals logged without an account exist only on your device and are removed when you uninstall the app. Deleting your FitLog account also removes your subscription record from our database, but it does not cancel an active subscription: cancel it in your App Store or Google Play subscription settings. Purchase records held by Apple, Google and RevenueCat follow their own policies.</p>
   </section>
 
   <section id="your-rights">
@@ -183,7 +194,7 @@
     <h2><span class="num">09</span> Contact</h2>
     <p>Questions about this policy, or a request that isn't covered by the in-app export/delete tools, go to:</p>
     <div class="contact-card">
-      <a class="email" href="mailto:walydalbahloul@gmail.com">walydalbahloul@gmail.com</a>
+      <a class="email" href="mailto:fitlogsupport5@gmail.com">fitlogsupport5@gmail.com</a>
     </div>
   </section>
 
